@@ -1,0 +1,594 @@
+/* Start Dashboard Widget */
+.container {
+    display              : grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.headName {
+    margin     : 20px 20px 40px;
+    padding-top: 10px;
+    text-align : center;
+}
+
+.welcom .intro img {
+    width        : 170px;
+    margin-bottom: -10px;
+}
+
+.welcom .avatar {
+    width                : 64px;
+    height               : 64px;
+    border               : 2px solid white;
+    border-radius        : 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius   : 50%;
+    -ms-border-radius    : 50%;
+    -o-border-radius     : 50%;
+    padding              : 2px;
+    box-shadow           : 0 0 5px #ddd;
+    margin-left          : 20px;
+    margin-top           : -32px;
+}
+
+.welcom .body {
+    border-top   : 1px solid black;
+    border-bottom: 1px solid grey;
+
+}
+
+.welcom .body>div {
+    flex: 1;
+}
+
+.welcom .visit {
+    margin            : 0 15px 15px auto;
+    transition        : 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition   : 0.3s;
+    -ms-transition    : 0.3s;
+    -o-transition     : 0.3s;
+}
+
+.welcom .visit:hover {
+    background-color: var(--blue-alt-color);
+}
+
+/* End Dashboard Widget */
+/* Start Quikdraft Widget */
+.form input,
+textarea {
+    width: 100%;
+}
+
+.quick_draft textarea {
+    resize    : none;
+    min-height: 180px;
+}
+
+.quick_draft .save {
+    margin-left       : auto;
+    transition        : 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition   : 0.3s;
+    -ms-transition    : 0.3s;
+    -o-transition     : 0.3s;
+    cursor            : pointer;
+}
+
+.quick_draft .save:hover {
+    background-color: var(--blue-alt-color);
+}
+
+/* End Quikdraft Widget */
+/* Start Targets Widget */
+
+
+
+.targets_row .details {
+    width: 100%;
+}
+
+.targets_row .icon {
+    border-radius        : 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius   : 10%;
+    -ms-border-radius    : 10%;
+    -o-border-radius     : 10%;
+}
+
+.targets_row .icon .mony {
+    color: #22c55e;
+}
+
+.targets_row .icon .code {
+    color: #f59e0b;
+}
+
+.targets_row .icon .user {
+    color: #0075ff;
+}
+
+/* End Targets Widget */
+/* Start Tickets Widget */
+.tickets .box {
+    border: 1px solid #ccc;
+    width : calc(50% - 10px);
+}
+
+.loader {
+    width        : 48px;
+    height       : 48px;
+    border       : 3px solid rgb(72, 0, 241);
+    border-radius: 50%;
+    display      : inline-block;
+    position     : relative;
+    box-sizing   : border-box;
+    animation    : rotation 1s linear infinite;
+}
+
+.loader::after {
+    content      : '';
+    box-sizing   : border-box;
+    position     : absolute;
+    left         : 50%;
+    top          : 50%;
+    transform    : translate(-50%, -50%);
+    width        : 40px;
+    height       : 40px;
+    border-radius: 50%;
+    border       : 3px solid;
+    border-color : #FF3D00 transparent;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* End Tickets Widget */
+/* Start Latest News Widget */
+
+.latest_news .news_rows:not(:last-of-type) {
+    margin-bottom : 20px;
+    padding-bottom: 20px;
+    border-bottom : 1px solid #eee;
+}
+
+.latest_news .news_rows img {
+    width                : 100px;
+    border-radius        : 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius   : 6px;
+    -ms-border-radius    : 6px;
+    -o-border-radius     : 6px;
+    margin-right         : 15px;
+}
+
+.latest_news .news_rows .lable {
+    height: 35%;
+}
+
+.latest_news .info {
+    flex-grow: 1;
+}
+
+.latest_news .info h3 {
+    margin   : 0 0 6px;
+    font-size: 16px;
+}
+
+/* End Latest News Widget */
+/* Start Latest Task Widget */
+
+.tasks .task_row:not(:last-of-type) {
+    margin-bottom : 15px;
+    padding-bottom: 15px;
+    border-bottom : 1px solid #eee;
+}
+
+.tasks .info {
+    flex-grow: 1;
+}
+
+.tasks .done {
+    opacity: 0.3;
+}
+
+.tasks .done h3,
+.tasks .done p {
+    text-decoration: line-through;
+}
+
+.tasks .delete {
+    cursor            : pointer;
+    transition        : 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition   : 0.3s;
+    -ms-transition    : 0.3s;
+    -o-transition     : 0.3s;
+}
+
+.tasks .delete:hover {
+    color: var(--red-color);
+}
+
+/* End Latest Task Widget */
+
+/* Start Latest Uploads Widget */
+.latest_uploads ul li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.uploads {
+    width     : 48px;
+    height    : 12px;
+    margin-top: 40px;
+    background: black;
+    display   : inline-block;
+    position  : relative;
+}
+
+.uploads::after {
+    content            : '';
+    left               : 50%;
+    top                : -47px;
+    transform          : translate(-50%, 0);
+    position           : absolute;
+    border             : 15px solid transparent;
+    border-bottom-color: blue;
+    box-sizing         : border-box;
+    animation          : bump 0.4s ease-in-out infinite alternate;
+}
+
+.uploads::before {
+    content   : '';
+    left      : 50%;
+    bottom    : 15px;
+    transform : translate(-50%, 0);
+    position  : absolute;
+    width     : 15px;
+    height    : 20px;
+    background: blue;
+    box-sizing: border-box;
+    animation : bump 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes bump {
+    0% {
+        transform: translate(-50%, 5px);
+    }
+
+    100% {
+        transform: translate(-50%, -5px);
+    }
+}
+
+
+.latest_uploads ul li img {
+    width : 40px;
+    height: 40px;
+}
+
+/* End Latest Uploads Widget */
+/* Start Last Project Widget */
+.last_project ul::before {
+    content         : '';
+    position        : absolute;
+    left            : 9px;
+    top             : -2px;
+    width           : 2px;
+    height          : 98%;
+    background-color: var(--blue-color);
+
+}
+
+.last_project ul li::before {
+    content              : '';
+    width                : 20px;
+    height               : 20px;
+    display              : block;
+    border-radius        : 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius   : 50%;
+    -ms-border-radius    : 50%;
+    -o-border-radius     : 50%;
+    background-color     : white;
+    border               : 2px solid white;
+    outline              : 2px solid var(--blue-color);
+    margin-right         : 15px;
+    z-index              : 1;
+}
+
+.last_project ul li.done_last_project::before {
+    content         : '';
+    background-color: var(--blue-color);
+}
+
+.last_project ul li.current_last_project::before {
+    content          : '';
+    animation        : change-color 0.8s infinite alternate;
+    -webkit-animation: change-color 0.8s infinite alternate;
+}
+
+@keyframes change-color {
+    from {
+        background-color: var(--blue-color);
+    }
+
+    to {
+        background-color: white;
+    }
+}
+
+.last_project .launch_icon {
+    position: absolute;
+    width   : 160px;
+    right   : 0;
+    bottom  : 0;
+    opacity : 0.3;
+}
+
+.loading {
+    width            : 30px;
+    height           : 30px;
+    border-radius    : 50%;
+    position         : relative;
+    animation        : rotate 1s linear infinite;
+    -webkit-animation: rotate 1s linear infinite;
+    margin-left      : 20px;
+}
+
+.loading::before {
+    content      : "";
+    box-sizing   : border-box;
+    position     : absolute;
+    inset        : 0px;
+    border-radius: 50%;
+    border       : 5px solid var(--orange-color);
+    animation    : prixClipFix 2s linear infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes prixClipFix {
+    0% {
+        clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0)
+    }
+
+    25% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0)
+    }
+
+    50% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%)
+    }
+
+    75% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%)
+    }
+
+    100% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0)
+    }
+}
+
+/* End Last Project Widget */
+/* Start Reminder Widget */
+.reminders ul li .key {
+    width : 15px;
+    height: 15px;
+}
+
+.reminders ul li>.blue {
+    border-left: 2px solid var(--blue-color);
+}
+
+.reminders ul li>.green {
+    border-left: 2px solid var(--green-color);
+}
+
+.reminders ul li>.orange {
+    border-left: 2px solid var(--orange-color);
+}
+
+.reminders ul li>.red {
+    border-left: 2px solid var(--red-color);
+}
+
+.reminders ul li>.secondary {
+    border-left: 2px solid gray;
+}
+
+/* End Reminder Widget */
+/* Start Latest Posts widget */
+.latest_posts .avatar_posts {
+    width : 48px;
+    height: 48px;
+}
+
+.latest_posts .post_content {
+    text-transform: capitalize;
+    line-height   : 1.8;
+    border-top    : 1px solid #eee;
+    border-bottom : 1px solid #eee;
+    min-height    : 140px;
+}
+
+/* End Latest Posts widget */
+/* Start Social Media widget */
+.social_media .box_social {
+    padding-left: 70px;
+}
+
+.social_media .box_social i {
+    position          : absolute;
+    left              : 0;
+    top               : 0;
+    width             : 52px;
+    transition        : 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition   : 0.3s;
+    -ms-transition    : 0.3s;
+    -o-transition     : 0.3s;
+}
+
+.social_media .box_social i:hover {
+    transform        : rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    -moz-transform   : rotate(5deg);
+    -ms-transform    : rotate(5deg);
+    -o-transform     : rotate(5deg);
+}
+
+.social_media .twitter {
+    background-color: rgb(29 161 242 / 20%);
+    color           : #1da1f2;
+}
+
+.social_media .twitter i,
+.social_media .twitter a {
+    background-color: #1da1f2;
+}
+
+.social_media .facebook {
+    background-color: rgb(24 119 242 / 20%);
+    color           : #1877f2;
+}
+
+.social_media .facebook i,
+.social_media .facebook a {
+    background-color: #1877f2;
+}
+
+.social_media .instagram {
+    background-color: rgba(242, 29, 178, 0.2);
+    color           : #c13584;
+}
+
+.social_media .instagram i,
+.social_media .instagram a {
+    background-color: #c13584;
+}
+
+.social_media .linkedin {
+    background-color: rgb(0 119 181 / 20%);
+    color           : #0077b5;
+}
+
+.social_media .linkedin i,
+.social_media .linkedin a {
+    background-color: #0077b5;
+}
+
+.social_media .github {
+    background-color: rgba(0, 0, 0, 0.26);
+    color           : #333;
+}
+
+.social_media .github i,
+.social_media .github a {
+    background-color: #333;
+}
+
+/* End Social Media widget */
+/* Start Project Table */
+.project_table {
+    /* width: 99%; */
+    grid-column: 1/4;
+}
+
+.project_table .responsive_table {
+    overflow-x: auto;
+}
+
+.project_table Table {
+    min-width: 1000px;
+}
+
+.project_table thead td {
+    background-color: gray;
+    font-weight     : bold;
+    color           : white;
+}
+
+.project_table Table td {
+    padding: 15px;
+}
+
+.project_table Table img {
+    width                : 32px;
+    height               : 32px;
+    border-radius        : 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius   : 50%;
+    -ms-border-radius    : 50%;
+    -o-border-radius     : 50%;
+    padding              : 2px;
+}
+
+.project_table Table img:not(:first-child) {
+    margin-left: -20px;
+}
+/* End Project Table */
+
+@media (max-width: 767px) {
+    .container {
+        display              : grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* Start Dashboard Widget */
+
+    .welcom .intro {
+        padding-bottom: 30px;
+    }
+
+    .welcom .avatar {
+        margin-left: 0;
+    }
+
+    /* End Dashboard Widget */
+    .latest_news .news_rows {
+        display: block !important;
+    }
+
+    .latest_news .news_rows .lable {
+        margin: 10px auto;
+        width : fit-content;
+    }
+
+    /* Start Project Table */
+    .project_table {
+        /* width: 99%; */
+        grid-column: 1/2;
+        overflow-x : auto;
+    }
+
+    /* End Project Table */
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1490px) {
+    .container {
+        display              : grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Start Project Table */
+    .project_table {
+        grid-column: 1/3;
+        overflow-x : auto;
+    }
+
+    /* End Project Table */
+}

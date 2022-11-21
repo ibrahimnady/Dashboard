@@ -1,0 +1,10 @@
+.headName {
+    margin: 20px 20px 40px;
+    padding-top: 10px;
+    text-align: center;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    
+}

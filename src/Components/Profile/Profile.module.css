@@ -1,0 +1,93 @@
+.headName {
+    margin     : 20px 20px 40px;
+    padding-top: 10px;
+    text-align : center;
+}
+
+.container {
+    display              : grid;
+    grid-template-columns: 1fr;
+}
+/* Start Profile */
+.profile {
+    display: flex;
+}
+.info{
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid #eee;
+}
+
+.avatar_box {
+    border-right : 5px solid #eee;
+    padding-right: 50px;
+    width: 250px;
+
+}
+
+.avatar_box img {
+    width : 120px;
+    height: 120px;
+}
+
+.info_input{
+    border: none;
+    padding-bottom: 15px;
+    font-weight: bold;
+    
+
+}
+/* End Profile */
+/* Start Skill */
+.skill{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+.skill_info{
+    height: 400px;
+    overflow-x: scroll;
+    padding-right: 10px;
+}
+/* End Skill */
+/* Start activity */
+.activity img{
+    width: 64px;
+    height: 64px;
+}
+.box_activity{
+    border-bottom: 2px solid #eee;
+    margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+    .container {
+        display              : grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .profile {
+        display: block;
+    }
+
+    .info_box {
+        display: block;
+    }
+
+    .avatar_box {
+        border-right : none;
+        padding-right: 0;
+    }
+    .info{
+        display: block;
+    }
+    .skill{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1490px) {
+    .container {
+        display              : grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
