@@ -19,8 +19,8 @@ export default function App() {
       <div className={' bg-offwhite'} >
         <Headers />
         <div className={' mt-70' + ' ' + styelApp.scoup}>
-          <Router basename="/tothepoint_Dashboard">
-            <Routes>
+          
+            <Routes basename="/tothepoint_Dashboard">
               <Route path='/' element={<Dashboard />} />
               <Route path='Dashboard' element={<Dashboard />} />
               <Route path='Settings' element={<Settings />} />
@@ -31,7 +31,7 @@ export default function App() {
               <Route path='Files' element={<Files />} />
               <Route path='Plans' element={<Plans />} />
             </Routes>
-          </Router>
+          
         </div>
       </div>
 
