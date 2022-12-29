@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Router, Routes } from 'react-router-dom'
 import styelApp from './App.module.css'
 import Dashboard from './Components/Dashboard/Dashboard'
 import Headers from './Components/Navbar/Navbar'
@@ -19,17 +19,19 @@ export default function App() {
       <div className={' bg-offwhite'} >
         <Headers />
         <div className={' mt-70' + ' ' + styelApp.scoup}>
-          <Routes>
-            <Route path='/' element={<Dashboard />} />
-            <Route path='Dashboard' element={<Dashboard />} />
-            <Route path='Settings' element={<Settings />} />
-            <Route path='Profile' element={<Profile />} />
-            <Route path='Projects' element={<Projects />} />
-            <Route path='Courses' element={<Courses />} />
-            <Route path='Friends' element={<Friends />} />
-            <Route path='Files' element={<Files />} />
-            <Route path='Plans' element={<Plans />} />
-          </Routes>
+          <Router basename="/tothepoint_Dashboard">
+            <Routes>
+              <Route path='/' element={<Dashboard />} />
+              <Route path='Dashboard' element={<Dashboard />} />
+              <Route path='Settings' element={<Settings />} />
+              <Route path='Profile' element={<Profile />} />
+              <Route path='Projects' element={<Projects />} />
+              <Route path='Courses' element={<Courses />} />
+              <Route path='Friends' element={<Friends />} />
+              <Route path='Files' element={<Files />} />
+              <Route path='Plans' element={<Plans />} />
+            </Routes>
+          </Router>
         </div>
       </div>
 
