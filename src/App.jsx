@@ -20,7 +20,7 @@ export default function App() {
         <Headers />
         <div className={' mt-70' + ' ' + styelApp.scoup}>
           
-            <Routes basename="/tothepoint_Dashboard">
+            <Routes>
               <Route path='/' element={<Dashboard />} />
               <Route path='Dashboard' element={<Dashboard />} />
               <Route path='Settings' element={<Settings />} />
